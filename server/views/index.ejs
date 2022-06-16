@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>아웃스탠딩</title>
+    <link rel="stylesheet" href="/stylesheets/reset.css" />
+    <link
+      rel="stylesheet"
+      href="/stylesheets/main/main.css"
+    />
+    <script defer src="/javascripts/index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="inner">
+          <div class="header-left">
+            <a href="/" class="logo"></a>
+            <div class="search-area">
+              <input class="search-input" type="text" />
+              <button class="search-btn">검색</button>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="actions">
+              <a href="/user/login">로그인</a>
+              <a href="/user/signUp">회원가입</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="menu-main">
+        <div class="menu-list">
+          <div class="have-sub-menu">
+            <a href="/" class="menu-item">포스팅</a>
+            <div
+              class="sub-menu-list"
+              style="display: none"
+            >
+              <a class="sub-menu-item" href="">이슈</a>
+              <a class="sub-menu-item" href="">인터뷰</a>
+              <a class="sub-menu-item" href="">북콘텐츠</a>
+              <a class="sub-menu-item" href="">경영</a>
+              <a class="sub-menu-item" href="">투자</a>
+              <a class="sub-menu-item" href="">비즈니스</a>
+              <a class="sub-menu-item" href="">과학기술</a>
+              <a class="sub-menu-item" href="">대중문화</a>
+              <a class="sub-menu-item" href=""
+                >라이프스타일</a
+              >
+              <a class="sub-menu-item" href=""
+                >서비스리뷰</a
+              >
+              <a class="sub-menu-item" href="">인문학</a>
+              <a class="sub-menu-item" href=""
+                >정책 및 규제</a
+              >
+              <a class="sub-menu-item" href="">알림</a>
+            </div>
+          </div>
+          <a class="menu-item" href="">인기 포스팅</a>
+          <a class="menu-item" href="">기업 DB</a>
+          <a class="menu-item" href="">잡 포스팅</a>
+          <a class="menu-item" href="">이슈차트</a>
+          <a class="menu-item" href="">스낵 콘텐츠</a>
+          <a class="menu-item" href="">광고</a>
+          <a class="menu-item" href="">프리미엄 결제</a>
+          <a class="menu-item" href="">로그인</a>
+          <a class="menu-item" href="">회원가입</a>
+        </div>
+        <div class="social"></div>
+      </nav>
+      <main class="post-list">
+        <div class="inner">
+          <% for(let i=0; i < data.length; i++) { %>
+          <div class="post" href="/item">
+            <img
+              class="thumbnail"
+              src="<%=data[i].thumbnailUrl %>"
+              alt="포스트 썸네일"
+            />
+            <h2 class="title"><%= data[i].title%></h2>
+            <p class="description"><%= data[i].text%></p>
+            <span class="post-data">
+              <img src="" alt="" class="author-image" />
+              <span class="author"></span>
+              <span class="written-time"></span>
+            </span>
+          </div>
+          <% } %>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
