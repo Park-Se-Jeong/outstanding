@@ -30,6 +30,9 @@ request("https://outstanding.kr", {}, (err, res, body) => {
 router.get("/", (req, res) => {
   res.render("post", { data: titleList });
 });
+router.post("/", (req, res) => {
+  console.log(req.body.title);
+})
 router.get("/1", (req, res) => {
   res.render("post", { data: titleList });
 });
