@@ -13,3 +13,6 @@
 
 ### lodash
 - 객체, 배열 핸들링
+
+### 미해결
+- post (게시물 요소) 클릭했을 때, post.ejs에 그 게시물의 title, text, thumbnailUrl 받아오기
