@@ -3,9 +3,9 @@ const router = express.Router();
 
 
 router.get('/login', function(req, res, next) {
-  res.send('로그인 페이지')
+  res.render('login', {})
 })
 router.get('/signUp', function(req, res, next) {
-  res.send('<h2>회원가입 페이지</h2>')
+  res.render('signUp', {})
 })
 module.exports = router;

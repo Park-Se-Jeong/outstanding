@@ -4,10 +4,6 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
-const cheerio = require("cheerio");
-const request = require("request");
-const _ = require("lodash");
-
 const indexRouter = require("./routes/index");
 const itemRouter = require("./routes/item");
 const userRouter = require("./routes/user")
