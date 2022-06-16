@@ -1,15 +1,21 @@
-
 const postEl = document.querySelectorAll(".post");
-const dataList = [];
 
 // item 라우터로 이동
 postEl.forEach((post, index) => {
+
+  let title = post.getElementsByClassName('title').item(this).innerHTML;
+  let text = post.getElementsByClassName('description').item(this).innerHTML;
+  let thumbnail = post.getElementsByClassName('thumbnail').item(this).currentSrc;
+
   post.addEventListener("click", function (e) {
-    location.href = "/item";
+    let data = {
+      "title": title,
+      "text": text,
+      "thumbnail": thumbnail
+    };
+
+  localStorage.setItem('data', JSON.stringify(data));
+  location.href = "/item";
   });
-  console.log(post.innerHTML);
 });
-
-
-
 
