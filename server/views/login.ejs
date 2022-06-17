@@ -7,27 +7,33 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/user/login.css">
     <title>로그인</title>
   </head>
   <body>
-    <div class="login-inner">
-      <form action="" class="login">
-        <label for="user-email">아이디 또는 이메일</label>
-        <input type="email" name="email" id="user-email" required />
+    <div class="login-wrapper">
+      <div class="login-inner">
+        <form action="" class="login">
+          <label for="user-email">아이디 또는 이메일</label>
+          <input type="email" name="email" id="user-email" required />
+    
+          <label for="user-password">비밀번호</label>
+          <input type="password" name="password" id="user-password" required />
+    
+          <div class="login-option">
+            <div class="retain">
+              <input type="checkbox" name="retainLogin" id="retain-login" />
+              <label for="retain-login">로그인 상태 유지</label>
+            </div>
+            <div class="find-password">비밀번호 찾기</div>
+          </div>
+          <button class="login-btn" type="submit">로그인</button>
+          <a class="signup-btn" href="/user/signUp">회원가입</a>
+          <a class="facebook-login-btn"href="">페이스북으로 로그인</a>
+        </form>
   
-        <label for="user-password">비밀번호</label>
-        <input type="password" name="password" id="user-password" required />
-  
-        <div class="login-option">
-          <input type="checkbox" name="retainLogin" id="retain-login" />
-          <label for="retain-login">로그인 상태 유지</label>
-  
-          <span class="find-password">비밀번호 찾기</span>
-        </div>
-        <button type="submit">로그인</button>
-      </form>
-      <a href="/user/signUp">회원가입</a>
-      <a href="">페이스북으로 로그인</a>
+      </div>
     </div>
     
   </body>

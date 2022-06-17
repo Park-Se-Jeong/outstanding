@@ -1,0 +1,82 @@
+.login-wrapper {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+.login-inner {
+  display: flex;
+  justify-content: center;
+}
+.login-inner .login {
+  width: 100%;
+  padding: 30px;
+}
+label[for="user-email"],
+label[for="user-password"] {
+  display: block;
+  margin-bottom: 8px;
+}
+#user-email,
+#user-password {
+  display: block;
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 30px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+#user-email {
+}
+#user-password {
+}
+.login-inner .login-option {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+}
+.login-option .retain {
+  display: flex;
+  align-items: center;
+}
+#retain-login {
+  margin-right: 8px;
+}
+
+.find-password {
+  display: block;
+}
+.login-btn {
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.67;
+  letter-spacing: -.3px;
+  color: #fff;
+  border: 1px solid #1f8ce6;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #1f8ce6;
+}
+.signup-btn,
+.facebook-login-btn {
+  display: block;
+  margin-top: 20px;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.67;
+  border-radius: 4px;
+  letter-spacing: -.3px;
+  background-color: #fff;
+  border: 2px solid #1f8ce6;
+  text-align: center;
+  line-height: 30px;
+}
