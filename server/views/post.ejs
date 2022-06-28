@@ -1,77 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-  <link rel="stylesheet" href="/stylesheets/reset.css">
-  <link rel="stylesheet" href="/stylesheets/post/post.css">
-
-  <script defer src="/javascripts/item.js"></script>
-  <title>게시글</title>
-</head>
-<body>
-<div class="wrapper">
-  <header class="header">
-    <div class="inner">
-      <div class="header-left">
-        <a href="/" class="logo"></a>
-        <div class="search-area">
-          <input class="search-input" type="text" />
-          <button class="search-btn">검색</button>
+    <link rel="stylesheet" href="/stylesheets/reset.css" />
+    <link
+      rel="stylesheet"
+      href="/stylesheets/post/post.css"
+    />
+    <title>게시글</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="inner">
+          <div class="header-left">
+            <a href="/" class="logo"></a>
+            <div class="search-area">
+              <input class="search-input" type="text" />
+              <button class="search-btn">검색</button>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="actions">
+              <a href="/login">로그인</a>
+              <a href="/signUp">회원가입</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="header-right">
-        <div class="actions">
-          <a href="/login">로그인</a>
-          <a href="/signUp">회원가입</a>
+      </header>
+      <nav class="menu-main">
+        <div class="menu-list">
+          <div class="have-sub-menu">
+            <a href="/post" class="menu-item">포스팅</a>
+            <div
+              class="sub-menu-list"
+              style="display: none"
+            >
+              <a class="sub-menu-item" href="">이슈</a>
+              <a class="sub-menu-item" href="">인터뷰</a>
+              <a class="sub-menu-item" href="">북콘텐츠</a>
+              <a class="sub-menu-item" href="">경영</a>
+              <a class="sub-menu-item" href="">투자</a>
+              <a class="sub-menu-item" href="">비즈니스</a>
+              <a class="sub-menu-item" href="">과학기술</a>
+              <a class="sub-menu-item" href="">대중문화</a>
+              <a class="sub-menu-item" href=""
+                >라이프스타일</a
+              >
+              <a class="sub-menu-item" href=""
+                >서비스리뷰</a
+              >
+              <a class="sub-menu-item" href="">인문학</a>
+              <a class="sub-menu-item" href=""
+                >정책 및 규제</a
+              >
+              <a class="sub-menu-item" href="">알림</a>
+            </div>
+          </div>
+          <a class="menu-item" href="">인기 포스팅</a>
+          <a class="menu-item" href="">기업 DB</a>
+          <a class="menu-item" href="">잡 포스팅</a>
+          <a class="menu-item" href="">이슈차트</a>
+          <a class="menu-item" href="">스낵 콘텐츠</a>
+          <a class="menu-item" href="">광고</a>
+          <a class="menu-item" href="">프리미엄 결제</a>
+          <a class="menu-item" href="">로그인</a>
+          <a class="menu-item" href="">회원가입</a>
         </div>
+        <div class="social"></div>
+      </nav>
+      <article class="post-main">
+        <div class="post-inner">
+          <div class="post">
+            <img
+              class="post-thumbnail"
+              src="<%=data.thumbnailUrl %>"
+              alt="포스트 썸네일"
+            />
+            <p class="post-date"><%= data.datetime%></p>
+            <h2 class="post-title"><%= data.title%></h2>
+            <div class="post-description">
+              <%- data.html%>
+            </div>
+          </div>
+          <% if(data.comment) { %>
+            <section class="comment-area">
+              <div class="comment">댓글(<%=data.comment.length%>)</div>
+              <% for(let i=0; i < data.comment.length; i++) { %>
+              <div class="comment">
+                <p><%= data.comment[i].html %></p>
+              </div>
+              <% } %>
+            </section>
+            <form action="" class="comment-input-area">
+              <input class="comment-input" type="textarea" name="comment">
+              <button class="comment-btn">등록</button>
+            </form>
+            <% } %>
+        </article>
       </div>
-    </div>
-  </header>
-  <nav class="menu-main">
-    <div class="menu-list">
-      <div class="have-sub-menu">
-        <a href="/item" class="menu-item">포스팅</a>
-        <div
-          class="sub-menu-list"
-          style="display: none"
-        >
-          <a class="sub-menu-item" href="">이슈</a>
-          <a class="sub-menu-item" href="">인터뷰</a>
-          <a class="sub-menu-item" href="">북콘텐츠</a>
-          <a class="sub-menu-item" href="">경영</a>
-          <a class="sub-menu-item" href="">투자</a>
-          <a class="sub-menu-item" href="">비즈니스</a>
-          <a class="sub-menu-item" href="">과학기술</a>
-          <a class="sub-menu-item" href="">대중문화</a>
-          <a class="sub-menu-item" href="">라이프스타일</a>
-          <a class="sub-menu-item" href="">서비스리뷰</a>
-          <a class="sub-menu-item" href="">인문학</a>
-          <a class="sub-menu-item" href="">정책 및 규제</a>
-          <a class="sub-menu-item" href="">알림</a>
         </div>
-      </div>
-      <a class="menu-item" href="">인기 포스팅</a>
-      <a class="menu-item" href="">기업 DB</a>
-      <a class="menu-item" href="">잡 포스팅</a>
-      <a class="menu-item" href="">이슈차트</a>
-      <a class="menu-item" href="">스낵 콘텐츠</a>
-      <a class="menu-item" href="">광고</a>
-      <a class="menu-item" href="">프리미엄 결제</a>
-      <a class="menu-item" href="">로그인</a>
-      <a class="menu-item" href="">회원가입</a>
-    </div>
-    <div class="social"></div>
-  </nav>
-    <article class="post-main">
-      <div class="post-main-inner">
-        <div class="main-post"></div>
-      </div>
-    </article>
-</div>
-  
-  
-</body>
+        
+  </body>
 </html>

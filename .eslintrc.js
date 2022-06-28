@@ -1,0 +1,42 @@
+// .eslintrc.js
+module.exports = {
+    env: {
+        browser: true,
+        es6: true,
+    },
+    globals: {
+        moment: true,
+        $: true,
+        jQuery: true,
+        _: true,
+        angular: true,
+        nhn: true,
+        ax5: true,
+        agGrid: true,
+        require: true,
+        module: true,
+        ENV: true,
+        global: true,
+        __dirname: true,
+        process: true,
+        exports: true,
+        config: true,
+        Buffer: true,
+        UPLOAD: true,
+    },
+    extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+    rules: {
+        'prettier/prettier': 'off',
+        'space-before-function-paren': 0,
+        'no-console': 'off',
+        'global-require': 0,
+        'linebreak-style': 0,
+        //indent: 'off',
+        //quotes: ['error', 'single'],
+        semi: ['error', 'always'],
+    },
+    parser: 'babel-eslint',
+    parserOptions: {
+        sourceType: 'module',
+    },
+};

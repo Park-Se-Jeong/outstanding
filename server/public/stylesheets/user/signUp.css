@@ -1,0 +1,49 @@
+.signup-wrapper {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+.signup-inner {
+  display: flex;
+  justify-content: center;
+}
+.signup-inner .signup {
+  width: 100%;
+  padding: 30px;
+}
+label[for="signup-email"],
+label[for="signup-username"],
+label[for="signup-password"],
+label[for="signup-password-check"] {
+  display: block;
+  margin-bottom: 8px;
+}
+#signup-email,
+#signup-username,
+#signup-password,
+#signup-password-check {
+  display: block;
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 30px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.signup-btn {
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.67;
+  letter-spacing: -0.3px;
+  color: #fff;
+  border: 1px solid #1f8ce6;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #1f8ce6;
+}

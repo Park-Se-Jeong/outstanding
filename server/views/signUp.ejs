@@ -4,9 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/reset.css">
+  <link rel="stylesheet" href="/stylesheets/user/signup.css">
   <title>회원가입</title>
 </head>
 <body>
+  <div class="signup-wrapper">
+    <div class="signup-inner">
+      <form action="" class="signup">
+        <label for="signup-email">아이디 또는 이메일</label>
+        <input type="email" name="email" id="signup-email" required />
+
+        <label for="signup-username">이름</label>
+        <input type="text" name="username" id="signup-username" required />
+  
+        <label for="signup-password">비밀번호</label>
+        <input type="password" name="password" id="signup-password" required />
+
+        <label for="signup-password-check">비밀번호 확인</label>
+        <input type="password" name="password-check" id="signup-password-check" required />
+        
+        <button class="signup-btn"type="submit">가입하기</button>
+      </form>
+
+    </div>
   
 </body>
 </html>

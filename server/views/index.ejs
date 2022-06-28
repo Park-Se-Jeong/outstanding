@@ -44,10 +44,16 @@
               <a class="sub-menu-item" href="">비즈니스</a>
               <a class="sub-menu-item" href="">과학기술</a>
               <a class="sub-menu-item" href="">대중문화</a>
-              <a class="sub-menu-item" href="">라이프스타일</a>
-              <a class="sub-menu-item" href="">서비스리뷰</a>
+              <a class="sub-menu-item" href=""
+                >라이프스타일</a
+              >
+              <a class="sub-menu-item" href=""
+                >서비스리뷰</a
+              >
               <a class="sub-menu-item" href="">인문학</a>
-              <a class="sub-menu-item" href="">정책 및 규제</a>
+              <a class="sub-menu-item" href=""
+                >정책 및 규제</a
+              >
               <a class="sub-menu-item" href="">알림</a>
             </div>
           </div>
@@ -59,14 +65,16 @@
           <a class="menu-item" href="">광고</a>
           <a class="menu-item" href="">프리미엄 결제</a>
           <a class="menu-item" href="/user/login">로그인</a>
-          <a class="menu-item" href="/user/signUp">회원가입</a>
+          <a class="menu-item" href="/user/signUp"
+            >회원가입</a
+          >
         </div>
         <div class="social"></div>
       </nav>
       <main class="post-list">
         <div class="inner">
           <% for(let i=0; i < data.length; i++) { %>
-          <div class="post" href="/item">
+          <a class="post" href="/post/<%=data[i].uri%>">
             <img
               class="thumbnail"
               src="<%=data[i].thumbnailUrl %>"
@@ -79,7 +87,7 @@
               <span class="author"></span>
               <span class="written-time"></span>
             </span>
-          </div>
+          </a>
           <% } %>
         </div>
       </main>
